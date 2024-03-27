@@ -38,7 +38,7 @@ const LoginScreen = () => {
       console.log('Received Name=:', userData.username);
       // Store token locally (e.g., using AsyncStorage)
       await AsyncStorage.setItem('token', token);
-      navigation.navigate('Home', {username: userData.username});
+      navigation.navigate('BottomTabs');
       Alert.alert('Login Successful', 'You have successfully logged in!');
       // Navigate to the next screen or perform any other action upon successful login
     } catch (error) {
@@ -100,7 +100,7 @@ const LoginScreen = () => {
           <TouchableOpacity
             style={{flexDirection: 'row'}}
             onPress={() => {
-              navigation.navigate('Home');
+              navigation.navigate('ForgetPassword');
             }}>
             <Text style={{color: 'black', marginLeft: 140}}>
               Forgot your password?
