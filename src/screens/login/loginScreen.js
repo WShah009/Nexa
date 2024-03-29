@@ -6,19 +6,46 @@ import {
   StyleSheet,
   Alert,
 } from 'react-native';
-import React from 'react';
+import React, {useEffect} from 'react';
 import {useState} from 'react';
 import Icon from 'react-native-vector-icons/Ionicons';
 import {CustomButton, CustomInput} from '../../components';
 import {KeyboardAwareScrollView} from 'react-native-keyboard-aware-scroll-view';
 import {useNavigation} from '@react-navigation/native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
+import {
+  GoogleSignin,
+  statusCodes,
+} from '@react-native-google-signin/google-signin';
 const LoginScreen = () => {
   const navigation = useNavigation();
 
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
+  useEffect(() => {
+    GoogleSignin.configure({
+      webClientId:
+        '1086741753261-6ajoqcj25paa7uq1l17n4dh0p2e61nt4.apps.googleusercontent.com ',
+    });
+  }, []);
+
+  async function onGoogleButtonPress() {
+    try {
+      // Check if your device supports Google Play
+      await GoogleSignin.hasPlayServices({showPlayServicesUpdateDialog: true});
+      // Get the users ID token
+      const {idToken} = await GoogleSignin.signIn();
+      console.log('Google Sign-In Response:', idToken);
+      console.log('myToken', idToken);
+      // Create a Google credential with the token
+      const googleCredential = auth.GoogleAuthProvider.credential(idToken);
+      // Sign-in the user with the credential
+      return auth().signInWithCredential(googleCredential);
+    } catch (error) {
+      console.log('This is our error', error);
+    }
+  }
   const handleLogin = async () => {
     try {
       const response = await fetch('http://192.168.63.161:3000/login', {
@@ -120,7 +147,7 @@ const LoginScreen = () => {
         </View>
 
         <View style={{flexDirection: 'row', marginTop: 8, marginBottom: 10}}>
-          <TouchableOpacity style={styles.google}>
+          <TouchableOpacity style={styles.google} onPress={onGoogleButtonPress}>
             <Image source={require('../../assets/images/google.png')} />
           </TouchableOpacity>
           <TouchableOpacity style={styles.facebook}>

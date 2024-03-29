@@ -12,7 +12,20 @@
           "package_name": "com.nexaapp"
         }
       },
-      "oauth_client": [],
+      "oauth_client": [
+        {
+          "client_id": "1086741753261-5vtrad7anh5b9t31gin0n56cqojjvrut.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.nexaapp",
+            "certificate_hash": "75deeede5774d642ba8f0a7773dc7ddc5daed891"
+          }
+        },
+        {
+          "client_id": "1086741753261-6ajoqcj25paa7uq1l17n4dh0p2e61nt4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
       "api_key": [
         {
           "current_key": "AIzaSyAJabRzx6YAJybQXyfHkEnzt8MVIrd7JxM"
@@ -20,7 +33,12 @@
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": []
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1086741753261-6ajoqcj25paa7uq1l17n4dh0p2e61nt4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
         }
       }
     }
