@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1086741753261",
+    "project_id": "nexa-app-95027",
+    "storage_bucket": "nexa-app-95027.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1086741753261:android:7389643919b9805c390524",
+        "android_client_info": {
+          "package_name": "com.nexaapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAJabRzx6YAJybQXyfHkEnzt8MVIrd7JxM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
