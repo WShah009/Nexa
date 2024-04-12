@@ -13,6 +13,7 @@ import {CustomButton, CustomInput} from '../../components';
 import {KeyboardAwareScrollView} from 'react-native-keyboard-aware-scroll-view';
 import {useNavigation} from '@react-navigation/native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
+import auth from '@react-native-firebase/auth';
 import {
   GoogleSignin,
   statusCodes,
@@ -34,6 +35,7 @@ const LoginScreen = () => {
     try {
       // Check if your device supports Google Play
       await GoogleSignin.hasPlayServices({showPlayServicesUpdateDialog: true});
+      console.log('dialogue up');
       // Get the users ID token
       const {idToken} = await GoogleSignin.signIn();
       console.log('Google Sign-In Response:', idToken);
@@ -139,7 +141,7 @@ const LoginScreen = () => {
         <CustomButton
           width={320}
           text={'LOGIN'}
-          onpress={() => handleLogin()}
+          onpress={() => navigation.navigate('BottomTabs')}
         />
 
         <View style={{marginTop: 160}}>

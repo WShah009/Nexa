@@ -4,9 +4,7 @@ import Icon from 'react-native-vector-icons/Ionicons';
 import {Text, TouchableWithoutFeedback} from 'react-native';
 import {useIsFocused} from '@react-navigation/native';
 import {HomeScreen, ShopScreen} from '../screens'; // Import your screen components
-
 const Tab = createBottomTabNavigator();
-
 export function MyTabs() {
   return (
     <Tab.Navigator
@@ -22,6 +20,7 @@ export function MyTabs() {
         name="Home"
         component={HomeScreen}
         options={{
+          headerShown: false,
           tabBarIcon: ({color, size}) => {
             const isFocused = useIsFocused();
             return (

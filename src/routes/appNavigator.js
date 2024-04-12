@@ -7,6 +7,7 @@ import {
   LoginScreen,
   ShopScreen,
   SignupScreen,
+  ViewAllScreen,
 } from '../screens';
 import {MyTabs} from './bottomTabNavigator';
 const AppNavigator = () => {
@@ -44,6 +45,12 @@ const AppNavigator = () => {
         <Stack.Screen
           name="ForgetPassword"
           component={ForgetPasswordScreen}
+          options={{headerShown: false}}
+        />
+
+        <Stack.Screen
+          name="ViewAll"
+          component={ViewAllScreen}
           options={{headerShown: false}}
         />
       </Stack.Navigator>
