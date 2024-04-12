@@ -9,7 +9,9 @@ import {
 } from 'react-native';
 import React from 'react';
 import {ViewAllList} from '../../components';
+import {useNavigation} from '@react-navigation/native';
 const ViewAllScreen = () => {
+  const navigation = useNavigation();
   const {height} = Dimensions.get('window');
   return (
     <View style={styles.container}>
@@ -34,13 +36,39 @@ const ViewAllScreen = () => {
           }}>
           Sale
         </Text>
-        <TouchableOpacity onPress={() => navigation.navigate('ViewAll')}>
+        <TouchableOpacity onPress={() => navigation.navigate('SaleCollection')}>
           <Text style={{color: 'black', padding: 20}}>View All</Text>
         </TouchableOpacity>
       </View>
       <View>
         <Text style={{color: 'grey', padding: 4, fontSize: 12}}>
           Super Summer Sale
+        </Text>
+      </View>
+      <ViewAllList />
+
+      <View
+        style={{
+          flexDirection: 'row',
+          marginTop: -18,
+          justifyContent: 'space-between',
+        }}>
+        <Text
+          style={{
+            color: 'black',
+            padding: 8,
+            fontSize: 26,
+            fontWeight: 'bold',
+          }}>
+          New
+        </Text>
+        <TouchableOpacity onPress={() => navigation.navigate('SaleCollection')}>
+          <Text style={{color: 'black', padding: 20}}>View All</Text>
+        </TouchableOpacity>
+      </View>
+      <View>
+        <Text style={{color: 'grey', padding: 4, fontSize: 12}}>
+          You've never seen it before
         </Text>
       </View>
       <ViewAllList />

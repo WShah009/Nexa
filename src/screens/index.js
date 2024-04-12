@@ -4,6 +4,7 @@ import SignupScreen from './signup/signupScreen';
 import ShopScreen from './shop/shopScreen';
 import ForgetPasswordScreen from './forgetPassword/forgetPasswordScreen';
 import ViewAllScreen from './viewAll/viewAllScreen';
+import SaleCollectionScreen from './saleCollection/saleCollectionScreen';
 export {
   HomeScreen,
   LoginScreen,
@@ -11,4 +12,5 @@ export {
   ShopScreen,
   ForgetPasswordScreen,
   ViewAllScreen,
+  SaleCollectionScreen,
 };

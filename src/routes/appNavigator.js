@@ -5,6 +5,7 @@ import {
   ForgetPasswordScreen,
   HomeScreen,
   LoginScreen,
+  SaleCollectionScreen,
   ShopScreen,
   SignupScreen,
   ViewAllScreen,
@@ -51,6 +52,12 @@ const AppNavigator = () => {
         <Stack.Screen
           name="ViewAll"
           component={ViewAllScreen}
+          options={{headerShown: false}}
+        />
+
+        <Stack.Screen
+          name="SaleCollection"
+          component={SaleCollectionScreen}
           options={{headerShown: false}}
         />
       </Stack.Navigator>
