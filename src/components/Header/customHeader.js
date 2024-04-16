@@ -6,7 +6,7 @@ const CustomHeader = ({text, height}) => {
   return (
     <View style={[styles.container, {height: height}]}>
       <Icon
-        name="arrow-back-outline" // Another example icon name from FontAwesome
+        name="arrow-back-outline"
         size={35}
         color="black"
         style={{padding: 10}}
@@ -19,7 +19,7 @@ const CustomHeader = ({text, height}) => {
       <Text style={styles.headerText}>{text}</Text>
 
       <Icon
-        name="search-outline" // Another example icon name from FontAwesome
+        name="search-outline"
         size={35}
         color="black"
         style={{padding: 10}}
@@ -38,8 +38,8 @@ const styles = StyleSheet.create({
     width: '100%',
     backgroundColor: '#fff',
     flexDirection: 'row',
-    alignItems: 'center', // Changed to alignItems
-    justifyContent: 'space-between', // Adjusted to space items evenly
+    alignItems: 'center',
+    justifyContent: 'space-between',
   },
   headerText: {
     fontSize: 27,
