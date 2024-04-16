@@ -1,10 +1,10 @@
 import {View, Text} from 'react-native';
 import React from 'react';
-
+import {CustomHeader} from '../../components/index';
 const ShopScreen = () => {
   return (
     <View>
-      <Text>shopScreeS</Text>
+      <CustomHeader text="My Header" height={60} />
     </View>
   );
 };

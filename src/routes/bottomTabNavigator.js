@@ -47,6 +47,7 @@ export function MyTabs() {
         name="Shop"
         component={ShopScreen}
         options={{
+          headerShown: false,
           tabBarIcon: ({color, size}) => {
             const isFocused = useIsFocused();
             return (
